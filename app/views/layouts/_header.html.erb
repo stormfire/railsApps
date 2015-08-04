@@ -1,0 +1,28 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li class=""><%= link_to 'Home', root_url, :class => "-brand" %></li>
+        <% if current_user && current_user.is_admin? %>
+          <li><%= link_to 'Users', users_path %></li>
+        <% end %>
+        <li class="user-wrap dropdown">
+          <%if current_user %>
+            <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#"><%= current_user.email + "(#{current_user.role.title.camelcase})"%> <span class="caret"></span></a>
+            <ul class="user-wrap dropdown-menu">
+              <li><%=link_to 'DashBoard', users_path  if current_user.is_admin? %></li>
+              <li><%=link_to 'Profile', user_url(current_user) %></li>
+              <li><%= link_to 'Logout', logout_url if current_user %></li>
+            </ul>
+          <% else %>
+            <% unless is_login_page? %>
+              <li><div class="login-wrap btn btn-success"><%= link_to 'Login', login_url %></div></li>
+            <% end %>
+          <% end %>
+          </li>
+          </ul>
+    </div><!--/.nav-collapse -->
+
+  </div>
+</nav>

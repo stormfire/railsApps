@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Management System</title>
+  <%= stylesheet_link_tag    "application.css", "bootstrap.min", "formtastic.css" %>
+  <%= javascript_include_tag "jquery.min.js", "bootstrap.min", "angular.min", "ui-bootstrap-tpls-0.13.0.min","jquery_ujs", "application.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body role="document">
+
+<div class="container" >
+
+  <%= render "layouts/header" %>
+
+  <div class="container theme-showcase">
+    <%= yield %>
+  </div>
+
+  <%= render "layouts/footer" %>
+</div>
+
+</body>
+</html>

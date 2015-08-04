@@ -1,0 +1,22 @@
+body {
+    padding-bottom: 30px;
+    padding-top: 70px;
+}
+
+.user-wrap {
+    margin-left: 600px;
+}
+.login-wrap {
+    margin-left: 850px;
+    margin-top:7px;
+}
+.login-wrap a{
+    color: white;
+}
+
+.user-wrap.dropdown-menu {
+    width:100%
+}
+form fieldset .label {
+    color: black;
+}

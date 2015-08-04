@@ -1,0 +1,7 @@
+Hi <%= @leave.user.full_name %> <br />
+
+Your <%= @leave.days %> days leave from <%= @leave.from_date.strftime(" %d %b %Y") %>
+to <%= @leave.to_date.strftime(" %d %b %Y") %> has been <%= @leave.status %> by <%= @leave.reviewer.full_name %><br/>
+
+Thanks<br/>
+Leave management Team
