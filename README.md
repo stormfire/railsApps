@@ -1,6 +1,6 @@
-Employee LEave Management
+User Authentication
 ---------------------------------------------------------
-Initial setup
-run
-$ rake db:setup
+Simple Ruby on Rails Application for user login/authentication using authlogic.
+
+*Under development
 
